@@ -1,0 +1,32 @@
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+  var num=userInput[0];
+  var att=userInput[1];
+  var countp=0;
+  for(let i=0;i<att.length;i++)
+  {
+      if(att[i]=='P')
+        countp++;
+  }
+  var n=(countp/num)*100;
+  if(n>25)
+    console.log("Not Blacklisted");
+  else
+    console.log("Blacklisted");
+
+  //end-here
+});
