@@ -1,0 +1,10 @@
+var str=['im a good developer'];
+var titleCaps=function (str){
+   str = str.toString().toLowerCase();
+    str=str.split(' ');
+    for(let i in str){
+           str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+    }
+    return str;
+}
+console.log(titleCaps(str));
