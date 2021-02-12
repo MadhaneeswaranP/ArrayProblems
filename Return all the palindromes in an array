@@ -1,0 +1,9 @@
+var str=['eye','box','mom','malayalam'];
+var palindrome=function (str){
+    let pstr=[];
+    for(let i in str){
+        if(isPalindrome(str[i])===true){
+          pstr.push(str[i]);  
+        }
+    }
+    console.log(pstr);
